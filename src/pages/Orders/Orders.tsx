@@ -10,7 +10,7 @@ const Orders = () => {
           className="w-full h-[200px] object-cover"
         />
         <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            <p className="text-3xl rubik-wet-paint-regular font-bold">Orders</p>
+            <p className="text-3xl rubik-moonrocks-regular font-bold">Orders</p>
         </div>
       </span>
       <div className="container">

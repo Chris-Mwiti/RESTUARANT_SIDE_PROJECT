@@ -51,7 +51,7 @@ const RegisterPage = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center space-y-7">
-      <p className="text-4xl text-center text-primary rubik-wet-paint-regular font-bold">
+      <p className="text-4xl text-center text-primary rubik-moonrocks-regular font-bold">
         VENUS REGISTER
       </p>
       <Card className="w-full max-w-lg">

@@ -37,7 +37,7 @@ const LoginPage = () => {
   };
   return (
     <div className="w-full h-full flex flex-col items-center justify-center p-3 space-y-5">
-      <p className="text-4xl text-center text-primary rubik-wet-paint-regular font-bold">
+      <p className="text-4xl text-center text-primary rubik-moonrocks-regular font-bold">
         VENUS LOGIN
       </p>
       <Card className="w-full max-w-xl">

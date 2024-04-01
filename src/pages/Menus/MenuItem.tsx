@@ -47,10 +47,8 @@ const MenuItem = () => {
     setTimeout(() => navigate("/menu"), 2000);
   };
 
-  if (isLoading)
-    return <MenuItemSkeleton />
-  if (isError)
-    return <ErrorFallBack error={error} retry={refetch} />
+  if (isLoading) return <MenuItemSkeleton />;
+  if (isError) return <ErrorFallBack error={error} retry={refetch} />;
 
   if (data) {
     return (
@@ -62,10 +60,10 @@ const MenuItem = () => {
             className="h-[400px] w-full object-cover"
           />
           <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            <p className="text-3xl rubik-wet-paint-regular font-bold text-foreground text-center">
+            <p className="text-3xl rubik-moonrocks-regular font-bold text-foreground text-center">
               Menu
             </p>
-            <p className="text-muted-foreground rubik-wet-paint-regular text-2xl">
+            <p className="text-muted-foreground rubik-moonrocks-regular text-2xl">
               Enjoy our tasty foods
             </p>
           </div>
@@ -81,10 +79,10 @@ const MenuItem = () => {
               />
             </span>
             <div className="space-y-10 w-full">
-              <p className="text-primary text-2xl font-bold rubik-wet-paint-regular">
+              <p className="text-primary text-2xl font-bold rubik-moonrocks-regular">
                 {data.productName}
               </p>
-              <p className="text-foreground rubik-wet-paint-regular text-xl font-medium">
+              <p className="text-foreground rubik-moonrocks-regular text-xl font-medium">
                 {data.productDescription}
               </p>
 

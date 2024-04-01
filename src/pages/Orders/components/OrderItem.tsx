@@ -50,10 +50,10 @@ const OrderItem = () => {
               />
             </span>
             <div className="space-y-10 w-full">
-              <p className="text-primary text-2xl font-bold rubik-wet-paint-regular">
+              <p className="text-primary text-2xl font-bold rubik-moonrocks-regular">
                 {data.productName}
               </p>
-              <p className="text-foreground rubik-wet-paint-regular text-xl font-medium">
+              <p className="text-foreground rubik-moonrocks-regular text-xl font-medium">
                 {data.productName}
               </p>
 

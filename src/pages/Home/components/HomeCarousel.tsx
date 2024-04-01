@@ -22,7 +22,7 @@ const HomeCarousel = () => {
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 items-center">
             <p
-              className="text-3xl font-medium rubik-wet-paint-regular 
+              className="text-3xl font-medium rubik-moonrocks-regular
            ">
               <span className="text-6xl text-[#f96416]">Immerse</span> yourself
               in a culinary journey where every bite{" "}
@@ -40,7 +40,7 @@ const HomeCarousel = () => {
             />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 items-center">
               <p
-                className="text-3xl font-medium rubik-wet-paint-regular 
+                className="text-3xl font-medium rubik-moonrocks-regular 
            ">
                 <span className="text-6xl text-[#f96416]">Immerse</span>{" "}
                 yourself in a culinary journey where every bite{" "}
@@ -48,9 +48,7 @@ const HomeCarousel = () => {
                 of passion and flavor
               </p>
               <Button variant={"link"}>
-                <Link to={"menu"}>
-                    View our full menu
-                </Link>
+                <Link to={"menu"}>View our full menu</Link>
               </Button>
             </div>
           </div>

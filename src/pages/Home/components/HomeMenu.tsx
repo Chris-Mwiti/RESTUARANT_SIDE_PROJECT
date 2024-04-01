@@ -14,16 +14,13 @@ import ErrorFallBack from "@/layouts/components/ErrorFallBack";
 const HomeMenu = () => {
   const { data, error, isError, isLoading, refetch } = useGetProducts("casual");
 
-  if (isLoading)
-    return (
-      <HomeSkeletonMenu />
-    );
-  if (isError) return <ErrorFallBack error={error} retry={refetch} />
+  if (isLoading) return <HomeSkeletonMenu />;
+  if (isError) return <ErrorFallBack error={error} retry={refetch} />;
 
   if (data) {
     return (
       <div className="w-full h-max container space-y-8">
-        <p className="text-4xl font-medium rubik-wet-paint-regular text-foreground text-center">
+        <p className="text-4xl font-medium rubik-moonrocks-regular text-foreground text-center">
           Preview Menu
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">

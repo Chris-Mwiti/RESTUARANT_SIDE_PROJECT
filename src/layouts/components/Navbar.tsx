@@ -34,12 +34,12 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <p className="text-center rubik-wet-paint-regular font-bold text-2xl text-primary">
+      <p className="text-center rubik-moonrocks-regular font-bold text-2xl text-primary">
         VENUS RESTUARANT
       </p>
       <div className="hidden md:flex space-x-4">
         {isLoggedIn ? (
-          <span className="size-12 rounded-full text-primary rubik-wet-paint-regular flex items-center justify-center font-medium text-xl bg-background">
+          <span className="size-12 rounded-full text-primary rubik-moonrocks-regular flex items-center justify-center font-medium text-xl bg-background">
             AD
           </span>
         ) : (
