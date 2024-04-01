@@ -10,7 +10,7 @@ const useCreateUser = () => {
     mutationFn: (values: TRegisterSchema) =>
       axios
         .post(
-          "http://localhost:4000/auth/register",
+          "https://restaurant-backend-sable.vercel.app/auth/register",
           values
         )
         .then((res) => res.data),
