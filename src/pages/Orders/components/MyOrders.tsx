@@ -26,6 +26,7 @@ const MyOrders = () => {
       </Alert>
     );
 
+ console.log(data);
   if (data) {
     return (
       <div className="w-full h-max container space-y-8">

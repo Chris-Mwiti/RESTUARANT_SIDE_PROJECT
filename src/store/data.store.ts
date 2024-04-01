@@ -175,6 +175,7 @@ export const useUserInfo = () =>
 export const useOrders = () => useAppDataStore((state) => state.orders);
 export const useAlertDialogStatus = () => useAppDataStore(state => state.isDialogOpen);
 export const useAppActions = () => useAppDataStore((state) => state.actions);
+export const useTokens = () => useAppDataStore((state) => state.token);
 
 
 export default useAppDataStore;
