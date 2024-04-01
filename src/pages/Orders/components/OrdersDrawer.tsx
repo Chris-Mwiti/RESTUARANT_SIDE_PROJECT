@@ -14,12 +14,14 @@ import { useOrderActions, useOrders } from "../store/data.store";
 import { Link } from "react-router-dom";
 import useCreateOrder from "../services/createOrder";
 import { useAppActions } from "@/store/data.store";
+import { useToast } from "@/components/ui/use-toast";
 
 const OrdersDrawer = () => {
   
   const orders = useOrders();
   const {removeOrderItem,removeAllItem} = useOrderActions();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const {toast} = useToast();
 
   const {mutate,isPending} = useCreateOrder();
   const {getTotalOrderDto} = useOrderActions();
@@ -28,6 +30,13 @@ const OrdersDrawer = () => {
   const handleCheckOut = () => {
     if(!isLoggerIn()){
       return openDialog()
+    }
+    if(orders.length <= 0){
+      return toast({
+        variant: "destructive",
+        title: "No Orders Placed",
+        description: "You have no orders"
+      })
     }
     mutate(orderDto, {
       onSuccess(data, variables, context) {
@@ -53,7 +62,7 @@ const OrdersDrawer = () => {
       <DrawerContent className="dark dark:bg-background">
         <div className="w-full mx-auto">
           <DrawerHeader>
-            <DrawerTitle className="text-foreground rubik-wet-paint-regular text-center text-3xl">
+            <DrawerTitle className="text-foreground rubik-moonrocks-regular text-center text-3xl">
               Your Orders
             </DrawerTitle>
             <DrawerDescription>
