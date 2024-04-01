@@ -69,8 +69,8 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
   },
   orders: [],
   token: {
-    accessToken: localStorage.getItem("venusAccessToken"),
-    refreshToken: localStorage.getItem("venusRefreshToken"),
+    accessToken: localStorage.getItem("marsAccessToken"),
+    refreshToken: localStorage.getItem("marsRefreshToken"),
   },
   products: [],
   isDialogOpen: false,
@@ -83,8 +83,8 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
     },
     addToken(token) {
       if (token.accessToken && token.refreshToken) {
-        localStorage.setItem("venusAccessToken", token.accessToken);
-        localStorage.setItem("venusRefreshToken", token.refreshToken);
+        localStorage.setItem("marsAccessToken", token.accessToken);
+        localStorage.setItem("marsRefreshToken", token.refreshToken);
       }
       return set((state) => ({
         ...state,
