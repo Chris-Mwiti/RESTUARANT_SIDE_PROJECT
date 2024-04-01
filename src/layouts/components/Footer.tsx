@@ -5,7 +5,7 @@ const Footer = () => {
     <div className=" min-h-[200px] w-full border flex flex-col space-y-10 md:flex-row p-3 md:justify-between md:space-y-0">
       <div className="space-y-5">
         <p className="rubik-wet-paint-regular text-3xl text-primary">
-          VENUS RESTUARANT
+          MARS RESTUARANT
         </p>
         <p className="rubik-wet-paint-regular text-xl text-muted-foreground">
           Make an order of our tasty food

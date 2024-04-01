@@ -57,7 +57,7 @@ const MenuItem = () => {
       <div className="w-full space-y-6">
         <span className="w-full h-[100px] relative">
           <img
-            src="https://i0.wp.com/www.cookhacker.com/wp-content/uploads/2012/06/Oven-Crispy-Fries-2.jpg?w=2685"
+            src="/wallpapers/marsWallPaper3.jfif"
             loading="lazy"
             className="h-[400px] w-full object-cover"
           />

@@ -35,7 +35,7 @@ const Navbar = () => {
         </ul>
       </div>
       <p className="text-center rubik-wet-paint-regular font-bold text-2xl text-primary">
-        VENUS RESTUARANT
+        MARS RESTUARANT
       </p>
       <div className="hidden md:flex space-x-4">
         {isLoggedIn ? (

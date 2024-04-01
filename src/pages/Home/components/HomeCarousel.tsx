@@ -17,15 +17,15 @@ const HomeCarousel = () => {
       <Slider {...settings} className="w-full h-full border rounded-md">
         <div className="text-foreground w-full h-full relative">
           <img
-            src="/VenusCarousel3.jfif"
+            src="/wallpapers/marsWallPaper1.jfif"
             className="w-full h-[580px] object-cover"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 items-center">
             <p
               className="text-3xl font-medium rubik-wet-paint-regular 
            ">
-              <span className="text-6xl text-[#f96416]">Immerse</span> yourself
-              in a culinary journey where every bite{" "}
+              <span className="text-6xl text-primary">Immerse</span> yourself in
+              a culinary journey where every bite{" "}
               <span className="text-6xl text-primary">whispers</span> stories of
               passion and flavor
             </p>
@@ -35,22 +35,20 @@ const HomeCarousel = () => {
         <div className="text-foreground h-full">
           <div className="text-foreground w-full h-full relative">
             <img
-              src="/VenusCarousel4.jfif"
+              src="/wallpapers/marsWallPaper2.jfif"
               className="w-full h-[580px] object-cover"
             />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 items-center">
               <p
                 className="text-3xl font-medium rubik-wet-paint-regular 
            ">
-                <span className="text-6xl text-[#f96416]">Immerse</span>{" "}
-                yourself in a culinary journey where every bite{" "}
+                <span className="text-6xl text-primary">Immerse</span> yourself
+                in a culinary journey where every bite{" "}
                 <span className="text-6xl text-primary">whispers</span> stories
                 of passion and flavor
               </p>
               <Button variant={"link"}>
-                <Link to={"menu"}>
-                    View our full menu
-                </Link>
+                <Link to={"menu"}>View our full menu</Link>
               </Button>
             </div>
           </div>

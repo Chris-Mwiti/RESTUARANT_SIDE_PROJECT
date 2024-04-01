@@ -30,7 +30,7 @@ const useLoginUser = () => {
         .then((res) => res.data),
     onSuccess(data, variables, context) {
       addUserDetails(data.user);
-      localStorage.setItem("venusUserId", data.user.id);
+      localStorage.setItem("marsUserId", data.user.id);
       addToken({
         accessToken: data.accessToken,
         refreshToken: data.refreshToken

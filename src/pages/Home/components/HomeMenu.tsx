@@ -12,14 +12,13 @@ import HomeSkeletonMenu from "./HomeSkeletonMenu";
 import ErrorFallBack from "@/layouts/components/ErrorFallBack";
 
 const HomeMenu = () => {
-  const { data, error, isError, isLoading, refetch } = useGetProducts("casual");
+  const { data, error, isError, isLoading, refetch } =
+    useGetProducts("classic");
 
-  if (isLoading)
-    return (
-      <HomeSkeletonMenu />
-    );
-  if (isError) return <ErrorFallBack error={error} retry={refetch} />
+  if (isLoading) return <HomeSkeletonMenu />;
+  if (isError) return <ErrorFallBack error={error} retry={refetch} />;
 
+  console.log(data);
   if (data) {
     return (
       <div className="w-full h-max container space-y-8">

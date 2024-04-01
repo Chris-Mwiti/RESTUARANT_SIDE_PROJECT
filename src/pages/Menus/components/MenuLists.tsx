@@ -11,23 +11,23 @@ import { useAppActions } from "@/store/data.store";
 import { Link } from "react-router-dom";
 
 const MenuLists = () => {
-  const {getBurgers, getPizzas, getSmoothies, getTraditions} = useAppActions()
-  const burgersList = getBurgers();
-  const pizzasList = getPizzas()
-  const smoothiesList = getSmoothies();
+  const {getBreakFasts, getLunches, getDesserts, getTraditions} = useAppActions()
+  const breakfastProducts = getBreakFasts();
+  const lunchProducts = getLunches()
+  const dessertsProducts = getDesserts();
   const traditionsList = getTraditions();
   return (
     <div className="w-full container">
-      <Tabs defaultValue="burgers" className="w-full space-y-10">
+      <Tabs defaultValue="breakfast" className="w-full space-y-10">
         <TabsList className="w-full grid grid-cols-5">
-          <TabsTrigger value="burgers">Burgers</TabsTrigger>
-          <TabsTrigger value="pizza">Pizza</TabsTrigger>
-          <TabsTrigger value="smoothies">Smoothies</TabsTrigger>
+          <TabsTrigger value="breakfast">Breakfast</TabsTrigger>
+          <TabsTrigger value="lunch">Lunch</TabsTrigger>
+          <TabsTrigger value="desserts">Desserts</TabsTrigger>
           <TabsTrigger value="traditions">Traditions</TabsTrigger>
         </TabsList>
-        <TabsContent value="burgers">
+        <TabsContent value="breakfast">
           <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
-            {burgersList.map((item, index) => (
+            {breakfastProducts.map((item, index) => (
               <Link key={`Burgers ${index}`} to={`/menu/${item.id}`}>
                 <Card className="w-[300px] hover:scale-105 transition ease-in delay-100 duration-75">
                   <CardContent className="w-full p-0">
@@ -53,9 +53,9 @@ const MenuLists = () => {
           </div>
         </TabsContent>
 
-        <TabsContent value="pizza">
+        <TabsContent value="lunch">
           <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
-            {pizzasList.map((item, index) => (
+            {lunchProducts.map((item, index) => (
               <Link key={`Pizza ${index}`} to={`/menu/${item.id}`}>
                 <Card className="w-[300px] hover:scale-105 transition ease-in delay-100 duration-75">
                   <CardContent className="w-full p-0">
@@ -81,9 +81,9 @@ const MenuLists = () => {
           </div>
         </TabsContent>
 
-        <TabsContent value="smoothies">
+        <TabsContent value="desserts">
           <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
-            {smoothiesList.map((item, index) => (
+            {dessertsProducts.map((item, index) => (
               <Link key={`Smoothies ${index}`} to={`/menu/${item.id}`}>
                 <Card className="w-[300px] hover:scale-105 transition ease-in delay-100 duration-75">
                   <CardContent className="w-full p-0">

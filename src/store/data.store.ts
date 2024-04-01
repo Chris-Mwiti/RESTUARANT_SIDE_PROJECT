@@ -22,6 +22,9 @@ interface IAppDataStoreActions {
   getPizzas: () => IProducts[];
   getSmoothies: () => IProducts[];
   getTraditions: () => IProducts[];
+  getBreakFasts: () => IProducts[];
+  getLunches: () => IProducts[];
+  getDesserts: () => IProducts[];
   setProducts: (products: IProducts[]) => void;
   openDialog:() => void;
   setDialogState: (state:boolean) => void;
@@ -31,7 +34,7 @@ type TAppDataStore = IAppDataStore;
 
 const useAppDataStore = create<TAppDataStore>((set, get) => ({
   userInfo: {
-    id: localStorage.getItem("venusUserId") || "",
+    id: localStorage.getItem("marsUserId") || "",
     email: "",
     firstName: "",
     lastName: "",
@@ -124,6 +127,25 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
         (item) => item.category.categoryName == "Tradition"
       );
       return traditionProducts;
+    },
+    getBreakFasts() {
+        const breakFastProducts = get().products.filter(
+          (item) => item.category.categoryName == "Breakfast menu"
+        );
+        console.log(breakFastProducts);
+        return breakFastProducts;
+    },
+    getDesserts() {
+        const dessertProducts = get().products.filter(
+          (item) => item.category.categoryName == "Desserts"
+        );
+        return dessertProducts
+    },
+    getLunches() {
+        const lunchProducts = get().products.filter(
+          (item) => item.category.categoryName == "Luncheon menu"
+        );
+        return lunchProducts;
     },
     openDialog() {
         return set((state) => ({
