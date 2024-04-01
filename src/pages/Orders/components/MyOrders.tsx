@@ -14,7 +14,7 @@ import useUpdateOrder from "../services/updateOrderById";
 
 const MyOrders = () => {
   const { data, isLoading, isError, error, refetch } = useGetOrders();
-  const { mutate, isPending } = useUpdateOrder();
+  const { mutate } = useUpdateOrder();
   if (isLoading) return <HomeSkeletonMenu />;
   if (isError) return <ErrorFallBack error={error} retry={refetch} />;
 
@@ -33,7 +33,7 @@ const MyOrders = () => {
           Preview Menu
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
-          {data.map((item, index) => (
+          {data.map((item) => (
             <Card className="w-[300px] hover:scale-105 transition ease-in delay-100 duration-75">
               <CardContent className="w-full p-0">
                 <span className="w-full h-max rounded-md relative">

@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import OrdersDrawer from "@/pages/Orders/components/OrdersDrawer";
-import { useAppActions, useUserInfo } from "@/store/data.store";
-import { GanttChart, LogIn, ShoppingCart, UserPlus } from "lucide-react";
+import { useAppActions } from "@/store/data.store";
+import { GanttChart, LogIn, UserPlus } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { isLoggerIn } = useAppActions();
-  const { name } = useUserInfo();
   const isLoggedIn = isLoggerIn();
   return (
     <div className="w-full min-h-6 flex items-center justify-between  px-6 py-3 border shadow-md shadow-primary/10 top-0 z-20 fixed bg-white/5 bg-clip-padding backdrop-filter bg-opacity-15 backdrop-blur-lg">

@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { ShoppingCart } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
-  TOrderDto,
   TOrderItem,
   useOrderActions,
 } from "../Orders/store/data.store";

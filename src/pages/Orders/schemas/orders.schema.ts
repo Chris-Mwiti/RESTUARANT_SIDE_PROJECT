@@ -60,11 +60,5 @@ const OrderSchema = z.object({
 });
 
 export type TOrdersZSchema = z.infer<typeof OrderSchema>;
-type TOrderItems = TOrdersZSchema & {
-  productName: string;
-  productImage: string;
-  sellingPrice: string;
-  orderQty: string;
-  productCategory: string;
-};
+
 export type TOrdersSchema = TOrdersZSchema;

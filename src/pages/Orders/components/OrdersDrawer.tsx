@@ -39,7 +39,7 @@ const OrdersDrawer = () => {
       })
     }
     mutate(orderDto, {
-      onSuccess(data, variables, context) {
+      onSuccess() {
         removeAllItem()
       },
     });
