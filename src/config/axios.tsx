@@ -6,8 +6,7 @@ const useAxiosInstance = () => {
 
   console.log(accessToken, refreshToken);
   return axios.create({
-    baseURL:
-      "http://localhost:4000",
+    baseURL: "https://restaurant-backend-sable.vercel.app",
     timeout: 3000,
     headers: {
       authorization: `Bearer ${accessToken} ${refreshToken}`,
