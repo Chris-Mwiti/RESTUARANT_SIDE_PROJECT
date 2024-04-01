@@ -25,8 +25,8 @@ const LoginPage = () => {
   const loginForm = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "admin@venus.co.ke",
-      password: "admin@venus",
+      email: "admin@mars.co.ke",
+      password: "admin@mars",
     },
   });
   const [showPwd, setShowPwd] = useState(false);

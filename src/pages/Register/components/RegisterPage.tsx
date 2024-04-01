@@ -31,10 +31,10 @@ const RegisterPage = () => {
     resolver: zodResolver(registerSchema),
     defaultValues: {
       firstName: "admin",
-      lastName: "venus",
-      email: "admin@venus.co.ke",
-      password: "admin@venus",
-      phone: "012345678",
+      lastName: "mars",
+      email: "admin@mars.co.ke",
+      password: "admin@mars",
+      phone: "0123456785",
     },
   });
 
