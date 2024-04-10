@@ -6,7 +6,7 @@ import { AlertInfo } from "./components/AlertInfo";
 
 const MainLayout = () => {
   return (
-    <div className="w-dvw min-h-dvh dark dark:bg-background overflow-x-hidden relative flex flex-col space-y-9">
+    <div className="w-dvw min-h-dvh overflow-x-hidden dark dark:bg-background relative flex flex-col space-y-9">
       <Navbar />
       <div className="w-full h-full border space-y-5 relative">
         <Outlet />
