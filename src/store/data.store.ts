@@ -25,6 +25,8 @@ interface IAppDataStoreActions {
   getBreakFasts: () => IProducts[];
   getLunches: () => IProducts[];
   getDesserts: () => IProducts[];
+  getMenItems:() => IProducts[];
+  getWomenItems:() => IProducts[];
   setProducts: (products: IProducts[]) => void;
   openDialog:() => void;
   setDialogState: (state:boolean) => void;
@@ -69,8 +71,8 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
   },
   orders: [],
   token: {
-    accessToken: localStorage.getItem("marsAccessToken"),
-    refreshToken: localStorage.getItem("marsRefreshToken"),
+    accessToken: localStorage.getItem("earthAccessToken"),
+    refreshToken: localStorage.getItem("earthRefreshToken"),
   },
   products: [],
   isDialogOpen: false,
@@ -83,8 +85,8 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
     },
     addToken(token) {
       if (token.accessToken && token.refreshToken) {
-        localStorage.setItem("marsAccessToken", token.accessToken);
-        localStorage.setItem("marsRefreshToken", token.refreshToken);
+        localStorage.setItem("earthAccessToken", token.accessToken);
+        localStorage.setItem("earthRefreshToken", token.refreshToken);
       }
       return set((state) => ({
         ...state,
@@ -146,6 +148,18 @@ const useAppDataStore = create<TAppDataStore>((set, get) => ({
           (item) => item.category.categoryName == "Luncheon menu"
         );
         return lunchProducts;
+    },
+    getMenItems() {
+      const menItems = get().products.filter(
+        (item) => item.category.categoryName == "Male"
+      );
+      return menItems
+    },
+    getWomenItems() {
+      const womenItems = get().products.filter(
+        (item) => item.category.categoryName == "Female"
+      )
+      return womenItems;
     },
     openDialog() {
         return set((state) => ({

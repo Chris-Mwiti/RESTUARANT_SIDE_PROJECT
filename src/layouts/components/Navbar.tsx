@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import MyOrdersSheet from "@/pages/Orders/components/MyOrdersSheet";
 import OrdersDrawer from "@/pages/Orders/components/OrdersDrawer";
 import { useAppActions, useUserInfo } from "@/store/data.store";
 import { GanttChart, LogIn, ShoppingCart, UserPlus } from "lucide-react";
@@ -20,7 +21,7 @@ const Navbar = () => {
           <li
             className="text-lg text-foreground font-medium cursor-pointer hover:text-primary transition 
           ease-in-out delay-100 duration-100">
-            <NavLink to={"menu"}>Menu</NavLink>
+            <NavLink to={"menu"}>Collections</NavLink>
           </li>
           <li
             className="text-lg text-foreground font-medium cursor-pointer hover:text-primary transition 
@@ -30,12 +31,20 @@ const Navbar = () => {
           <li
             className="text-lg text-foreground font-medium cursor-pointer hover:text-primary transition 
           ease-in-out delay-100 duration-100">
-            <NavLink to={"myOrders"}>Orders</NavLink>
+            <MyOrdersSheet />
+          </li>
+          <li className="flex space-x-4 items-center">
+            <Link to={"login"}>
+              <p className="text-lg">Login</p>
+            </Link>
+            <Link to={"register"}>
+              <p className="text-lg">Register</p>
+            </Link>
           </li>
         </ul>
       </div>
-      <p className="text-center rubik-wet-paint-regular font-bold text-2xl text-primary">
-          WEST RESTUARANT 
+      <p className="text-center lobster-regular font-bold text-2xl text-primary">
+        DRESS ME
       </p>
       <div className="hidden md:flex space-x-4">
         {isLoggedIn ? (
@@ -46,7 +55,7 @@ const Navbar = () => {
           <>
             <Link to={"register"}>
               <Button variant={"outline"} className="text-foreground">
-                <UserPlus className="size-5 mr-3 stroke-white" />
+                <UserPlus className="size-5 mr-3 stroke-foreground" />
                 Register
               </Button>
             </Link>
@@ -54,7 +63,7 @@ const Navbar = () => {
               <Button
                 variant={"outline"}
                 className="text-foreground bg-transparent">
-                <LogIn className="size-5 mr-3 stroke-white" />
+                <LogIn className="size-5 mr-3 stroke-foreground" />
                 Login
               </Button>
             </Link>

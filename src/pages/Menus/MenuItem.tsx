@@ -57,16 +57,16 @@ const MenuItem = () => {
       <div className="w-full space-y-6">
         <span className="w-full h-[100px] relative">
           <img
-            src="/wallpapers/marsWallPaper3.jfif"
+            src="/wallpapers/dressMe1.jpeg"
             loading="lazy"
             className="h-[400px] w-full object-cover"
           />
           <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            <p className="text-3xl rubik-wet-paint-regular font-bold text-foreground text-center">
-              Menu
+            <p className="text-3xl lobster-regular font-bold text-foreground text-center">
+              Collections
             </p>
-            <p className="text-muted-foreground rubik-wet-paint-regular text-2xl">
-              Enjoy our tasty foods
+            <p className="text-muted-foreground lobster-regular text-2xl">
+              Browse collections
             </p>
           </div>
         </span>
@@ -81,10 +81,10 @@ const MenuItem = () => {
               />
             </span>
             <div className="space-y-10 w-full">
-              <p className="text-primary text-2xl font-bold rubik-wet-paint-regular">
+              <p className="text-primary text-2xl font-bold lobster-regular">
                 {data.productName}
               </p>
-              <p className="text-foreground rubik-wet-paint-regular text-xl font-medium">
+              <p className="text-foreground lobster-regular text-xl font-medium">
                 {data.productDescription}
               </p>
 

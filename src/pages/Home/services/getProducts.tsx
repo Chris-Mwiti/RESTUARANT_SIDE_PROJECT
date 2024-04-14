@@ -14,7 +14,7 @@ export type Products = {
   category: {
     categoryName: string;
   };
-  type: "casual" | "classic";
+  type: "casual" | "classic" | "clothing";
 };
 
 export interface IResponse<T> {

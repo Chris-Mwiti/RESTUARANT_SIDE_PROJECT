@@ -2,9 +2,11 @@ import { useMutation } from "@tanstack/react-query";
 import { TRegisterSchema } from "../schemas/register.schema";
 import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const useCreateUser = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   return useMutation({
     mutationKey: ["createUser"],
     mutationFn: (values: TRegisterSchema) =>
@@ -20,6 +22,8 @@ const useCreateUser = () => {
         description:
           "Your account has been created successfully. Plesae login to access the dashboard",
       });
+
+      setTimeout(() => navigate("/login"),2000);
     },
     onError(error, variables, context) {
       toast({

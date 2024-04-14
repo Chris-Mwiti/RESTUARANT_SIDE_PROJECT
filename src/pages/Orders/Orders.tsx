@@ -5,7 +5,7 @@ const Orders = () => {
     <div className="w-full space-y-6">
       <span className="w-full h-[200px] relative">
         <img
-          src="/wallpapers/marsWallPaper3.jfif"
+          src="/wallpapers/dressMe2.jpeg"
           loading="lazy"
           className="w-full h-[200px] object-cover"
         />

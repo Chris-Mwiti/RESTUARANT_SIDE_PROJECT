@@ -25,8 +25,8 @@ const LoginPage = () => {
   const loginForm = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "admin@mars.co.ke",
-      password: "admin@mars",
+      email: "admin@earth.co.ke",
+      password: "admin@earth",
     },
   });
   const [showPwd, setShowPwd] = useState(false);
@@ -37,8 +37,8 @@ const LoginPage = () => {
   };
   return (
     <div className="w-full h-full flex flex-col items-center justify-center p-3 space-y-5">
-      <p className="text-4xl text-center text-primary rubik-wet-paint-regular font-bold">
-        VENUS LOGIN
+      <p className="text-4xl text-center text-primary lobster-regular font-bold">
+        DRESS ME
       </p>
       <Card className="w-full max-w-xl">
         <CardHeader>

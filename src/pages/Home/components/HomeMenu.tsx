@@ -13,7 +13,7 @@ import ErrorFallBack from "@/layouts/components/ErrorFallBack";
 
 const HomeMenu = () => {
   const { data, error, isError, isLoading, refetch } =
-    useGetProducts("classic");
+    useGetProducts("clothing");
 
   if (isLoading) return <HomeSkeletonMenu />;
   if (isError) return <ErrorFallBack error={error} retry={refetch} />;
@@ -22,8 +22,8 @@ const HomeMenu = () => {
   if (data) {
     return (
       <div className="w-full h-max container space-y-8">
-        <p className="text-4xl font-medium rubik-wet-paint-regular text-foreground text-center">
-          Preview Menu
+        <p className="text-4xl font-medium lobster-regular text-foreground text-center">
+          Preview Collections
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
           {data.map((item, index) => (
@@ -49,9 +49,11 @@ const HomeMenu = () => {
           ))}
         </div>
         <div className="w-full flex items-center justify-center">
-          <Button variant={"outline"} className="text-foreground w-full">
-            View Our Full Menu
-          </Button>
+          <Link to={"menu"}>
+            <Button variant={"outline"} className="text-foreground w-full">
+              View Our Full Collection
+            </Button>
+          </Link>
         </div>
       </div>
     );
