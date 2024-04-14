@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const useAxiosInstance = () => {
-  const accessToken = localStorage.getItem("marsAccessToken");
-  const refreshToken = localStorage.getItem("marsRefreshToken");
+  const accessToken = localStorage.getItem("earthAccessToken");
+  const refreshToken = localStorage.getItem("earthRefreshToken");
 
   console.log(accessToken,refreshToken);
   return axios.create({
