@@ -6,7 +6,7 @@ import { useAppActions, useUserInfo } from "@/store/data.store";
 
 const useGetOrders = () => {
   const axiosInstance = useAxiosInstance();
-  const { id } = useUserInfo();
+  const id = localStorage.getItem("earthUserId");
   console.log(id);
   return useQuery({
     queryKey: ["Orders"],
