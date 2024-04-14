@@ -2,6 +2,7 @@ import useAxiosInstance from "@/config/axios"
 import { useMutation } from "@tanstack/react-query"
 import { TOrderDto } from "../store/data.store";
 import { useToast } from "@/components/ui/use-toast";
+import { queryClient } from "@/main";
 
 const useCreateOrder = () => {
     const axiosInstance = useAxiosInstance();
@@ -13,7 +14,10 @@ const useCreateOrder = () => {
             toast({
                 title: "Order Success",
                 description: "Your order placement is successfull"
-            })
+            }),
+            queryClient.invalidateQueries({
+                queryKey: ["Orders"]
+            });
         },
     })
 }
