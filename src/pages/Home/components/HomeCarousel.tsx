@@ -24,8 +24,8 @@ const HomeCarousel = () => {
             <p
               className="text-3xl font-medium rubik-wet-paint-regular 
            ">
-              <span className="text-6xl text-primary">Immerse</span> yourself in
-              a culinary journey where every bite{" "}
+              <span className="text-6xl text-primary">Dive</span> yourself in
+              a  journey where every meal{" "}
               <span className="text-6xl text-primary">whispers</span> stories of
               passion and flavor
             </p>

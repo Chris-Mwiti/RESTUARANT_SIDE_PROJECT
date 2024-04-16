@@ -32,6 +32,16 @@ const Navbar = () => {
           ease-in-out delay-100 duration-100">
             <NavLink to={"myOrders"}>Orders</NavLink>
           </li>
+          <li
+            className="text-lg text-foreground font-medium cursor-pointer hover:text-primary transition 
+          ease-in-out delay-100 duration-100">
+            <NavLink to={"Login"}>Login</NavLink>
+          </li>
+          <li
+            className="text-lg text-foreground font-medium cursor-pointer hover:text-primary transition 
+          ease-in-out delay-100 duration-100">
+            <NavLink to={"register"}>Register</NavLink>
+          </li>
         </ul>
       </div>
       <p className="text-center rubik-wet-paint-regular font-bold text-2xl text-primary">
